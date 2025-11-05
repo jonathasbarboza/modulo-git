@@ -18,7 +18,12 @@ def mostrar_mensagem_inicial():
     Exibe uma mensagem de boas-vindas ao desafio.
     Retorno esperado: string com a mensagem "Bem-vindo ao Desafio de Git!"
     """
+    print("Bem vindo ao desafio de Git")
     pass
+
+mostrar_mensagem_inicial()
+
+
 
 def listar_comandos_git_basicos():
     """
