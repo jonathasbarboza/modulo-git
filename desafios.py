@@ -52,12 +52,23 @@ def criar_mensagem_commit(funcao_nome):
 listar_comandos_git_basicos()
 print(criar_mensagem_commit("listar_comandos_git_basicos"))
 
+import re
+
 def verificar_tag_valida(tag):
     """
     Verifica se uma tag está no formato 'vX.Y' (ex: v1.0, v2.1).
     Retorna True se o formato for válido, caso contrário False.
     """
-    pass
+    padrao = r"^v\d+\.\d+$"
+    return bool(re.match(padrao, tag))
+
+
+print(verificar_tag_valida("v1.0"))
+print(verificar_tag_valida("v2.1"))
+print(verificar_tag_valida("1.0"))
+print(verificar_tag_valida("v1")) 
+print(verificar_tag_valida("v1.0.0"))
+
 
 
 def gerar_relatorio_final(funcoes_concluidas):
